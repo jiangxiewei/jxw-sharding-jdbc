@@ -22,6 +22,7 @@ public abstract class SelectRestClauseParser implements SQLClauseParser {
      */
     public final void parse() {
         Collection<Keyword> unsupportedRestKeywords = new LinkedList<>();
+        //删除了 DefaultKeyword.UNION 未测试. 若有BUG建议添加回去
         unsupportedRestKeywords.addAll(Arrays.asList(DefaultKeyword.INTERSECT, DefaultKeyword.EXCEPT, DefaultKeyword.MINUS));
         unsupportedRestKeywords.addAll(Arrays.asList(getUnsupportedKeywordsRest()));
         lexerEngine.unsupportedIfEqual(unsupportedRestKeywords.toArray(new Keyword[unsupportedRestKeywords.size()]));

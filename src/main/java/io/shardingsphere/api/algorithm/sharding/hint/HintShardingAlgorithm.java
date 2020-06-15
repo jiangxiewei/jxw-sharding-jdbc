@@ -40,6 +40,13 @@ public interface HintShardingAlgorithm extends ShardingAlgorithm {
      */
     Collection<String> doSharding(Collection<String> availableTargetNames, ShardingValue shardingValue);
 
+    /**
+     * 此方法为特别添加,为了在使用hint时也能解析表名,供我自己使用.
+     * @param availableTargetNames available data sources or tables
+     * @param logicalTableNames logical table names
+     * @param shardingValue sharding value
+     * @return the data sources or tables's names that you choise
+     */
     Collection<String> doSharding(Collection<String> availableTargetNames, Collection<String> logicalTableNames, ShardingValue shardingValue);
 
 }

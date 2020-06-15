@@ -70,6 +70,7 @@ public final class DatabaseHintSQLRouter implements ShardingRouter {
     public SQLRouteResult route(final String logicSQL, final List<Object> parameters, final SQLStatement sqlStatement) {
         SQLRouteResult result = new SQLRouteResult(sqlStatement);
         RoutingResult routingResult = new DatabaseHintRoutingEngine(
+                //通过sqlStatement获取到表名,原版是没有sqlStatement.getTables().getTableNames()的.
                 shardingRule.getShardingDataSourceNames().getDataSourceNames(), sqlStatement.getTables().getTableNames(), (HintShardingStrategy) shardingRule.getDefaultDatabaseShardingStrategy()).route();
         for (TableUnit each : routingResult.getTableUnits().getTableUnits()) {
             result.getRouteUnits().add(new RouteUnit(each.getDataSourceName(), new SQLUnit(logicSQL, new ArrayList<>(Collections.singleton(parameters)))));

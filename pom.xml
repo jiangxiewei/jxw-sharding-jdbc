@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ibuscloud.sharding-jdbc</groupId>
-    <artifactId>ibus-sharding-jdbc-starter</artifactId>
+    <groupId>com.jxw.sharding-jdbc</groupId>
+    <artifactId>jxw-sharding-jdbc-starter</artifactId>
     <version>RELEASE-1.0.0</version>
 
     <properties>

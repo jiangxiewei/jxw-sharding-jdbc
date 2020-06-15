@@ -71,6 +71,7 @@ public class SpringBootConfiguration implements EnvironmentAware {
      */
     @Bean
     public DataSource dataSource() throws SQLException {
+        //提前了configMap的初始化.
         if (!configMapProperties.getConfigMap().isEmpty()) {
             ConfigMapContext.getInstance().getConfigMap().putAll(configMapProperties.getConfigMap());
         }
