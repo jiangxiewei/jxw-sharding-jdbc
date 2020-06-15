@@ -1,7 +1,7 @@
 # sharding-jdbc 自用版本
 
 ## 使用前准备
-![apache](src/main/resources/picture/apache.png)  
+[![apache](src/main/resources/picture/apache.png)](https://shardingsphere.apache.org)
 请参考sharding-sphere(apache)[官方文档](https://shardingsphere.apache.org)学习sharding-jdbc.
 基于sharding-jdbc 3.1.0修改,不过使用方面和apache版的4.0.0可能大多数差不多,可直接看4.0.0的文档.
 ## RELEASE-1.0.0
